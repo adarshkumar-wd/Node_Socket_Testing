@@ -22,7 +22,7 @@ io.on('connection', (socket) => {
 
     socket.on("driver::online", (driverName) => {
         console.log(`Driver Online: ${driverName}`);
-        socket.emit("driver::online", driverName)
+        io.emit("driver::online", driverName)
     })
 });
 
